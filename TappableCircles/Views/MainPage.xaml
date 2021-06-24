@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TappableCircles.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True">
+
+    <!--<StackLayout>
+        <Frame
+            Padding="24"
+            BackgroundColor="#2196F3"
+            CornerRadius="0">
+            <Label
+                FontSize="36"
+                HorizontalTextAlignment="Center"
+                Text="Welcome to Xamarin.Forms!"
+                TextColor="White" />
+        </Frame>
+        <Label
+            Padding="30,10,30,10"
+            FontSize="Title"
+            Text="Start developing now" />
+        <Label
+            Padding="30,0,30,0"
+            FontSize="16"
+            Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" />
+        <Label Padding="30,24,30,0" FontSize="16">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Learn more at " />
+                        <Span FontAttributes="Bold" Text="https://aka.ms/xamarin-quickstart" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+
+    </StackLayout>-->
+
+
+    <Grid
+        Margin="32"
+        ColumnDefinitions="Auto, Auto, Auto, Auto, Auto"
+        HorizontalOptions="CenterAndExpand"
+        RowDefinitions="Auto, Auto, Auto, Auto, Auto">
+        <!--  Top  -->
+        <Ellipse
+            Grid.Row="0"
+            Grid.Column="1"
+            HeightRequest="48"
+            HorizontalOptions="End"
+            Stroke="Red"
+            StrokeThickness="4"
+            WidthRequest="48">
+            <Ellipse.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CircleTappedCommand}" CommandParameter="First Top" />
+            </Ellipse.GestureRecognizers>
+        </Ellipse>
+        <Ellipse
+            Grid.Row="0"
+            Grid.Column="2"
+            HeightRequest="48"
+            HorizontalOptions="Start"
+            Stroke="Red"
+            StrokeThickness="4"
+            WidthRequest="48">
+            <Ellipse.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CircleTappedCommand}" CommandParameter="Second Top" />
+            </Ellipse.GestureRecognizers>
+        </Ellipse>
+        <!--  Left  -->
+        <Ellipse
+            Grid.Row="1"
+            Grid.Column="0"
+            HeightRequest="48"
+            HorizontalOptions="Start"
+            Stroke="Red"
+            StrokeThickness="4"
+            WidthRequest="48">
+            <Ellipse.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CircleTappedCommand}" CommandParameter="First Left" />
+            </Ellipse.GestureRecognizers>
+        </Ellipse>
+        <Ellipse
+            Grid.Row="2"
+            Grid.Column="0"
+            HeightRequest="48"
+            HorizontalOptions="Start"
+            Stroke="Red"
+            StrokeThickness="4"
+            WidthRequest="48">
+            <Ellipse.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CircleTappedCommand}" CommandParameter="Second Left" />
+            </Ellipse.GestureRecognizers>
+        </Ellipse>
+        <!--  Center  -->
+        <Ellipse
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            HeightRequest="100"
+            HorizontalOptions="Center"
+            Stroke="Red"
+            StrokeThickness="4"
+            WidthRequest="100">
+            <Ellipse.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CircleTappedCommand}" CommandParameter="Center" />
+            </Ellipse.GestureRecognizers>
+        </Ellipse>
+        <!--  Right  -->
+        <Ellipse
+            Grid.Row="1"
+            Grid.Column="3"
+            HeightRequest="48"
+            HorizontalOptions="Start"
+            Stroke="Red"
+            StrokeThickness="4"
+            WidthRequest="48">
+            <Ellipse.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CircleTappedCommand}" CommandParameter="First Right" />
+            </Ellipse.GestureRecognizers>
+        </Ellipse>
+        <Ellipse
+            Grid.Row="2"
+            Grid.Column="3"
+            HeightRequest="48"
+            HorizontalOptions="Start"
+            Stroke="Red"
+            StrokeThickness="4"
+            WidthRequest="48">
+            <Ellipse.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CircleTappedCommand}" CommandParameter="Second Right" />
+            </Ellipse.GestureRecognizers>
+        </Ellipse>
+
+        <!--  Bottom  -->
+        <Ellipse
+            Grid.Row="3"
+            Grid.Column="1"
+            HeightRequest="48"
+            HorizontalOptions="Start"
+            Stroke="Red"
+            StrokeThickness="4"
+            WidthRequest="48">
+            <Ellipse.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CircleTappedCommand}" CommandParameter="First Bottom" />
+            </Ellipse.GestureRecognizers>
+        </Ellipse>
+        <Ellipse
+            Grid.Row="3"
+            Grid.Column="2"
+            HeightRequest="48"
+            HorizontalOptions="Start"
+            Stroke="Red"
+            StrokeThickness="4"
+            WidthRequest="48">
+            <Ellipse.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CircleTappedCommand}" CommandParameter="Second Bottom" />
+            </Ellipse.GestureRecognizers>
+        </Ellipse>
+    </Grid>
+</ContentPage>
